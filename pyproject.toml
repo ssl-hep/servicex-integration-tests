@@ -1,0 +1,12 @@
+[project]
+name = "servicex-integration-tests"
+version = "0.0.0"
+description = "Scripts and configs to exercise ServiceX"
+requires-python = ">=3.10"
+dependencies = [
+    "servicex",   # deliberately unpinned: always the newest release
+    "typer",      # used by the scripts directly
+]
+
+[tool.uv]
+package = false   # no build step, just an environment for running scripts

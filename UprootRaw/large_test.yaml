@@ -1,0 +1,13 @@
+General:
+    OutputFormat: root-rntuple
+
+Sample:
+    - Name: zmumu
+      Dataset: !Rucio data25_13p6TeV:data25_13p6TeV.00500014.physics_Main.deriv.DAOD_PHYSLITE.f1591_m2272_p7019
+      Query: !UprootRaw |
+            {"treename": "CollectionTree",
+             "filter_name": ["/AnalysisMuonsAuxDyn.(pt|eta|phi|charge|quality)$/i",
+                             "/AnalysisMuonsAuxDyn.(ptvarcone30_Nonprompt_All_MaxWeightTTVA_pt500|neflowisol20)$/i"],
+             "cut": "count_nonzero(AnalysisMuonsAuxDyn.pt >= 10e3) >= 2"
+            }
+

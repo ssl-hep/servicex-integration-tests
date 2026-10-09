@@ -1,0 +1,10 @@
+# Intentionally not committed: servicex must always resolve to the newest release
+uv.lock
+
+.venv/
+__pycache__/
+*.pyc
+.idea/
+
+# ServiceX local output
+servicex_output/
